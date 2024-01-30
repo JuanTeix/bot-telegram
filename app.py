@@ -46,11 +46,13 @@ def get_latest_video_info():
 def send_telegram_message(video_id, video_title, chat):
     # Si chat = 1 envia mensaje al grupo publico
     if chat == 1:
+        chat_id = telegram_chat_id
         message = f"Nuevo video en el canal \n {video_title} \n https://www.youtube.com/watch?v={video_id}"
     # Si chat = 0 envia mensaje al grupo privado
     elif chat == 0:
+        chat_id = telegram_chat_id_priv
         message = "Bot Activo"
-    url = f"https://api.telegram.org/bot{telegram_bot_token}/sendMessage?chat_id={telegram_chat_id_priv}&text={message}"
+    url = f"https://api.telegram.org/bot{telegram_bot_token}/sendMessage?chat_id={chat_id}&text={message}"
     requests.get(url)
 
 
