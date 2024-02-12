@@ -18,7 +18,7 @@ Este bot de Python está diseñado para monitorear un canal específico de YouTu
 ## Instalación
 1. Clona este repositorio.
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/JuanTeix/bot-telegram.git
    ```
 2. Instala las dependencias necesarias.
    ```bash
